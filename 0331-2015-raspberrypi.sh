@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# install webiopi
+# install webiopi http://code.google.com/p/webiopi/wiki/INSTALL
 
 # mkdir tmp
 cd tmp
