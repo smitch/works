@@ -4,6 +4,9 @@ FILE_NAME=`date +%m%d-%Y`-`hostname`
 echo make file: $FILE_NAME.sh
 cat <<EOF > $FILE_NAME.sh
 #! /bin/bash
+
+# contents:
+
 TMP_DIR=tmp-$FILE_NAME
 if [ ! -e \$TMP_DIR ]; then
   mkdir \$TMP_DIR
