@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # contents: install air video server
-#           system monitor indicator panel
+#                   system monitor indicator panel
+#                   mozc
 
 # TMP_DIR=tmp-0410-2015-akashi
 # if [ ! -e $TMP_DIR ]; then
@@ -38,8 +39,10 @@
 
 # http://forums.inmethod.com/topic/2291-air-video-server-hd-for-linux/
 
-sudo add-apt-repository ppa:indicator-multiload/stable-daily
-sudo apt-get update && sudo apt-get install indicator-multiload
+# sudo add-apt-repository ppa:indicator-multiload/stable-daily
+# sudo apt-get update && sudo apt-get install indicator-multiload
 
+# sudo apt-get isntall ibus-mozc
+# http://d.hatena.ne.jp/kitokitoki/20120925/p2
 
 # rm -rf $TMP_DIR
