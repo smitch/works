@@ -111,5 +111,11 @@ cd $TMP_DIR
 #         password is zabbix
 # change password Administration->user
 
+
+# service zabbix-agent start
+# chkconfig zabbix-agent on
+
+# zabbix_get -s 172.16.1.20 -k agent.version
+
 # rm -rf $TMP_DIR
 
