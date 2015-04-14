@@ -12,7 +12,7 @@ if [ ! -e $TMP_DIR ]; then
 fi
 cd $TMP_DIR
 
-############## mail setting ###################
+############## mail setting #####################################################################
 # log in gmail account and enable double authentication
 # generate password for application
 # the password to input is the generated one
@@ -43,7 +43,37 @@ cd $TMP_DIR
 
 # echo test | mail -s hostname root
 
-#################################zabbix setting#################################################
+#################################mysql setting###################################################
+# mkdir /var/log/mysql
+# chown -R mysql:mysql /var/log/mysql
+# mv -i /etc/my.cnf /etc/my.cnf.org
+# vi /etc/my.cnf
+# # ---add below---------------------------
+# [mysqld]
+# datadir=/var/lib/mysql
+# socket=/var/lib/mysql/mysql.sock
+# symbolic-links=0
+# user=mysql
+# character-set-server = utf8
+# skip-character-set-client-handshake
+
+# slow_query_log=1
+# slow_query_log_file=/var/log/mysql/slow_query.log
+# long_query_time=1
+# min_examined_row_limit=1000
+
+# [client]
+# default-character-set = utf8
+
+# [mysqld_safe]
+# log-error=/var/log/mysql/mysqld.log
+# pid-file=/var/run/mysqld/mysqld.pid
+# ------------------------------
+# service mysqld start
+# chkconfig mysqld on
+# mysql_secure_installation
+
+#################################zabbix setting##################################################
 
 # sudo rpm -ivh http://repo.zabbix.com/zabbix/2.4/rhel/6/x86_64/zabbix-release-2.4-1.el6.noarch.rpm
 # sudo yum -y install zabbix-server zabbix-web
@@ -53,9 +83,33 @@ cd $TMP_DIR
 # sudo vi /etc/yum.repos.d/zabbix.repo
 # enabled=1 -> enabled=0
 
+# mysql -u root -p
+# --execute below—————————
+# create database zabbix character set utf8;
+# grant all privileges on zabbix.* to zabbix@localhost identified by <password>;
+# FLUSH PRIVILEGES;
+# exit
+# ——————————
 
+# mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.4.2/create/schema.sql
+# mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.4.2/create/images.sql
+# mysql -uroot -p zabbix < /usr/share/doc/zabbix-server-mysql-2.4.2/create/data.sql
 
+# vi /etc/zabbix/zabbix_server.conf
+# —modify below—————————
+# # DBPassword=
+# DBPassword=<password>
+# ——————————
 
+# restart httpd
+
+# edit /etc/php.ini
+# date.timezone="Asia/Tokyo"
+
+# access localhost/zabbix
+# default user is admin
+#         password is zabbix
+# change password Administration->user
 
 # rm -rf $TMP_DIR
 
