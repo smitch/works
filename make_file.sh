@@ -7,11 +7,11 @@ cat <<EOF > $FILE_NAME.sh
 
 # contents:
 
-TMP_DIR=tmp-$FILE_NAME
-if [ ! -e \$TMP_DIR ]; then
-  mkdir \$TMP_DIR
-fi
-cd \$TMP_DIR
+#TMP_DIR=tmp-$FILE_NAME
+#if [ ! -e \$TMP_DIR ]; then
+#  mkdir \$TMP_DIR
+#fi
+#cd \$TMP_DIR
 # rm -rf \$TMP_DIR
 
 EOF
