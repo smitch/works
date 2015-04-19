@@ -28,6 +28,6 @@ TMP_DIR=tmp-0419-2015-raspberrypi
 # sudo chmod 755 /usr/local/bin/raspi_temp.sh
 
 # contab -e
-# 5 * * * * /usr/local/bin/raspi_temp.sh
+# */7 * * * * /usr/local/bin/raspi_temp.sh
 
 rm -rf $TMP_DIR
