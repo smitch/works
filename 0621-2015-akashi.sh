@@ -21,5 +21,5 @@ cd $TMP_DIR
 cd cnijfilter-mg6200series-3.60-1-deb
 sudo ./install
 
-# rm -rf $TMP_DIR
+rm -rf $TMP_DIR
 
