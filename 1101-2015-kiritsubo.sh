@@ -43,5 +43,10 @@ git clone https://github.com/emacs-java/auto-java-complete
 javac Tags.java
 java -cp "/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.25-3.b17.el6_6.x86_64:." Tags
 
+echo "install java-snippet"
+git clone https://github.com/nekop/yasnippet-java-mode.git
+mkdir ~/.emacs.d/snippets/
+mv yasnippet-java-mode/snippets/java-mode ~/.emacs.d/snippets/
+
 # cd ../
 # rm -rf $TMP_DIR
