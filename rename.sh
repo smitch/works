@@ -12,5 +12,5 @@ for i in `ls`; do
   # echo $Y
   # echo $MD
   echo git mv $i $Y-$MD.sh
-  git mv $i $j
+  git mv $i $Y-$MD.sh
 done
