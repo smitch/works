@@ -1,6 +1,10 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 HOSTNAME=`hostname`
+=======
+HOSTNAME="kiritsubo"
+>>>>>>> kiritsubo
 cd $HOSTNAME
 for i in `ls`; do
   j=`echo $i | sed "s/-$HOSTNAME//"`
