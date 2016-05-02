@@ -30,7 +30,7 @@ EOF
 
 echo "install auto-complete by auto-install"
 echo "M-x auto-install-batch"
-echo "select auto-comlete"
+echo "select auto-complete"
 
 echo "install yasnippet"
 git clone --recursive https://github.com/capitaomorte/yasnippet
