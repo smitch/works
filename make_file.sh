@@ -1,6 +1,6 @@
 #! /bin/bash
 
-FILE_NAME=`date +%m%d-%Y`
+FILE_NAME=`date +%Y-%m%d`
 # FILE_NAME=`date +%m%d-%Y`-`hostname`
 echo make file: $FILE_NAME.sh
 HOSTNAME=`hostname`
