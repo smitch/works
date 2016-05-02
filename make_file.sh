@@ -7,8 +7,8 @@ HOSTNAME=`hostname`
 SCRIPTDIR=`dirname $0`
 cd $SCRIPTDIR
 
-if [ ! -e \$HOSTNAME ]; then
- mkdir \$HOSTNAME
+if [ ! -e $HOSTNAME ]; then
+ mkdir $HOSTNAME
 fi
 cd $HOSTNAME
 
